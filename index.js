@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
 
 async function extrairFilmesInfo() {
   try {
-    const response = await axios.get('https://yts.proxyninja.org/');
+    const response = await axios.get('https://api.allorigins.win/raw?url=https://yts.proxyninja.org/');
     const html = response.data;
     const $ = cheerio.load(html);
 
